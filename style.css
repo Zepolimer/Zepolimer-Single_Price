@@ -1,15 +1,15 @@
-/*The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-- Fontsize: 16px*/
-
 :root {
     --cyan: hsl(179, 62%, 43%);
     --bright-yellow: hsl(71, 73%, 54%);
 
     --light-gray: hsl(204, 43%, 93%);
     --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: border-box;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 
 /* CONTAINERS */
 .main-container {
-    width: 280px;
+    width: 80%;
     margin: 70px auto;
     border-radius: 25px;
 }
@@ -27,19 +27,20 @@ body {
 /* FIRST ROW */
 .container-1 {
     background-color: white;
-    padding-left:20px;
-    padding-right: 20px;
-    padding-bottom: 40px;
-    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 20px;
+
     height: 200px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
 .title1 {
+    align-self: flex-start;
     font-size: 18px;
     color: var(--cyan);
-    padding-bottom: 10px;
 }
 
 .subtitle {
@@ -60,6 +61,9 @@ body {
     background-color: var(--cyan);
     padding: 10px 20px;
     height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .price {
@@ -123,6 +127,9 @@ button:hover {
     height: 200px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 ul {
@@ -145,11 +152,12 @@ li {
 }
 .attribution a { color: var(--cyan); }
 
+
 /* TABLETS & PC SCREENS */
 @media (min-width: 680px) {
     .main-container {
         width: 630px;
-        margin: 150px auto;
+        margin: 15% auto;
     }
 
     .wrapper {
